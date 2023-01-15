@@ -7,32 +7,31 @@ use Illuminate\Http\Request;
 
 class TodolistController extends Controller
 {
-  public function index()
-  {
-    $todolists = Todolist::all();
-    return view('home', compact('todolists'));
-  }
+    public function index()
+    {
+        $todolists = Todolist::all();
+        return view('home', compact('todolists'));
+    }
 
-  public function store(Request $request)
-  {
-    $data = $request -> validate([
-        'todo' => 'required'
-    ]);
+    public function store(Request $request)
+    {
+        $data = $request->validate([
+            'todo' => 'required'
+        ]);
 
-    Todolist::create($data);
-    return back();
-  }
+        Todolist::create($data);
+        return back();
+    }
 
-  public function edit(Todolist $todolist)
-  {
-    // $todolist->isCompleted = !$todolist->isCompleted;
-    // $todolist->save();
-    // return back();
-  }
+    public function updateEditableContent(Request $request)
+    {
+        Todolist::where('id', $request->id)->update(['todo' => $request->value]);
+        return back();
+    }
 
-  public function destroy(Todolist $todolist)
-  {
-    $todolist->delete();
-    return back();
-  }
+    public function destroy(Todolist $todolist)
+    {
+        $todolist->delete();
+        return back();
+    }
 }
