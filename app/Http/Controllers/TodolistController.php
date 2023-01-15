@@ -9,8 +9,8 @@ class TodolistController extends Controller
 {
   public function index()
   {
-    $todolist = Todolist::all();
-    return view('home', compact('todolist'));
+    $todolists = Todolist::all();
+    return view('home', compact('todolists'));
   }
 
   public function store(Request $request)
@@ -25,7 +25,9 @@ class TodolistController extends Controller
 
   public function edit(Todolist $todolist)
   {
-    // return view('edit', compact('todolist'));
+    // $todolist->isCompleted = !$todolist->isCompleted;
+    // $todolist->save();
+    // return back();
   }
 
   public function destroy(Todolist $todolist)
