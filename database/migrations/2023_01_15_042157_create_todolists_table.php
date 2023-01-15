@@ -16,7 +16,7 @@ class CreateTodolistsTable extends Migration
     {
         Schema::create('todolists', function (Blueprint $table) {
             $table->id();
-            $table->boolean('isCompleted')->default('false');
+            $table->boolean('isCompleted');
             $table->string('todo');
             $table->timestamps();
         });
