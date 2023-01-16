@@ -16,8 +16,7 @@ class CreateTodolistsTable extends Migration
     {
         Schema::create('todolists', function (Blueprint $table) {
             $table->id();
-            $table->timestamp('completed_at')->nullable();
-            $table->timestamp('edited_at')->nullable();
+            $table->tinyInteger('completed') -> default(0);
             $table->string('todo');
             $table->timestamps();
         });

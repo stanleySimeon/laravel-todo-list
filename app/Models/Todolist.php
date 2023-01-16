@@ -10,7 +10,8 @@ class Todolist extends Model
     use HasFactory;
 
     protected $fillable = [
-        'todo'
+        'todo',
+        'completed' // 0 = false, 1 = true
     ];
 
 }

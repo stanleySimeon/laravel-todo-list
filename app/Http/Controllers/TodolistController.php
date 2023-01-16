@@ -16,16 +16,23 @@ class TodolistController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'todo' => 'required'
+            'todo' => 'required|min:5',
+            'completed'
         ]);
 
+        $request->session()->flash('success', 'Todo added successfully!');
         Todolist::create($data);
         return back();
     }
 
     public function updateEditableContent(Request $request)
     {
-        Todolist::where('id', $request->id)->update(['todo' => $request->value]);
+        $data = $request->validate([
+            'todo' => 'required|min:5',
+            'completed'
+        ]);
+
+        Todolist::where('id', $request->id)->update($data);
         return back();
     }
 
