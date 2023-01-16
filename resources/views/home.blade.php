@@ -11,14 +11,14 @@
 </head>
 
 <body>
-    <div class="container-fluid w-full h-screen flex justify-center items-center">
-        <div class="w-1/3 h-96 relative flex flex-col border-1 border-[#ccc] shadow-md rounded-md">
+    <div class="container-fluid w-full h-screen px-4 py-12 md:py-0 flex justify-center items-center bg-black">
+        <div class="w-full md:w-1/3 h-full md:h-96 relative flex flex-col border-1 border-[#ccc] md:shadow-md rounded-md">
             <h1 class="ml-2 mt-4 font-bold text-3xl text-gray-500">TO-DO LIST</h1>
             <form action="{{route ('store') }}" method="post" autocomplete="off" class="mt-3 w-full p-2 text-center">
                 @csrf
                 <div class="container flex justify-between items-center space-x-4">
                     <input type="text" name="todo" autofocus class="w-full p-2 outline-none bg-white shadow-sm border-2 border-orange-600 rounded-sm" placeholder="Add new todo...">
-                    <button type="submit" class="text-orange-600 px-4 py-2 bg-white shadow-sm hover:bg-orange-600 border-2 border-orange-600 hover:text-white rounded-sm"><i class="fa fa-plus"></i></button>
+                    <button type="submit" class="text-white md:text-orange-600 px-4 py-2 bg-orange-600 md:bg-white shadow-sm md:hover:bg-orange-600 md:border-2 md:border-orange-600 md:hover:text-white rounded-sm"><i class="fa fa-plus"></i></button>
                 </div>
             </form>
             @if ($todolists->count())

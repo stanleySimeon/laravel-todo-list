@@ -53,8 +53,3 @@ This project is licensed under the MIT License
 - This project is open for contributions and suggestions, feel free to create an issue or a pull request if you want to improve or add new features.
 
 Enjoy using this simple yet powerful to-do list application!
-
-
-
-
-
