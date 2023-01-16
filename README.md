@@ -2,6 +2,12 @@
 
 > This is a simple and easy-to-use to-do list application built using Laravel, MySQL, and Tailwind CSS. The application allows users to create and manage their tasks in a clean and intuitive interface.
 
+
+## Screenshots
+
+- Screenshot of the to-do list application
+<img width="518" alt="Screenshot 2023-01-15 at 19 16 04" src="https://user-images.githubusercontent.com/91237525/212575587-d4265f50-fe42-4efd-9c58-8784a7bdcb1f.png">
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -48,10 +54,6 @@ This project is licensed under the MIT License
 
 Enjoy using this simple yet powerful to-do list application!
 
-## Screenshots
-
-- Screenshot of the to-do list application
-<img width="518" alt="Screenshot 2023-01-15 at 19 16 04" src="https://user-images.githubusercontent.com/91237525/212575587-d4265f50-fe42-4efd-9c58-8784a7bdcb1f.png">
 
 
 
