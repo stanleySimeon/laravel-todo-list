@@ -37,11 +37,11 @@
             @endif
             @if ($todolists->count())
             <div class="w-full absolute left-0 bottom-0 rounded-b-md px-2 py-4 text-center">
-                <h2 class="text-md text-gray-600">You have {{$todolists->count()}} {{Str::plural('todo', $todolists->count())}}!</h2>
+                <h2 class="text-md text-gray-300 md:text-gray-600">You have {{$todolists->count()}} {{Str::plural('todo', $todolists->count())}} in your list!</h2>
             </div>
             @else
             <div class="w-full absolute left-0 bottom-0 rounded-b-md px-2 py-4 text-center">
-                <h2 class="text-md text-gray-600">No Todo's Yet!</h2>
+                <h2 class="text-md text-gray-300 md:text-gray-600">No Todo's Yet!</h2>
             </div>
             @endif
         </div>
